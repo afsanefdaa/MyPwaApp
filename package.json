@@ -2,16 +2,23 @@
   "name": "my-pwa-app",
   "version": "0.1.0",
   "private": true,
+  "author": "Afsane Fadaei",
   "dependencies": {
+    "@material-ui/core": "^4.7.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint:scss": "stylelint 'src/**/*.scss' --syntax scss",
+    "lint:scss:fix": "stylelint 'src/**/*.scss' --syntax scss --fix",
+    "lint:js": "eslint . --ext .js,.jsx",
+    "lint:js:fix": "npm run lint:js -- --fix"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,5 +34,31 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "lint-staged": {
+    "./src/**/*.{js,jsx}": [
+      "npm run --silent lint:js:fix",
+      "git add"
+    ],
+    "./src/**/*.scss": [
+      "npm run --silent lint:scss:fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {
+    "eslint": "^6.7.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "stylelint": "^12.0.0",
+    "stylelint-config-standard": "^19.0.0"
   }
 }
