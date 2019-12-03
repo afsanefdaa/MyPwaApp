@@ -5,10 +5,14 @@
   "author": "Afsane Fadaei",
   "dependencies": {
     "@material-ui/core": "^4.7.0",
+    "@material-ui/icons": "^4.5.1",
+    "add": "^2.0.6",
+    "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "yarn": "^1.19.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -51,11 +55,15 @@
     }
   },
   "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/preset-flow": "^7.7.4",
     "eslint": "^6.7.1",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.16.0",
+    "flow-bin": "^0.112.0",
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",
     "stylelint": "^12.0.0",

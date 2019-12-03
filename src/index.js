@@ -2,31 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import {
-  Route, Link, Switch, BrowserRouter as Router,
+  Route, Switch, BrowserRouter as Router,
 } from 'react-router-dom';
 import {
   Home, About, Book, Contact, Notfound,
 } from './pages';
 import * as serviceWorker from './serviceWorker';
+import { Layout } from './components';
 
 
 const routing = (
   <Router>
-    <div>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/books/1">books</Link>
-        </li>
-        <li>
-          <Link to="/contact">contact</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-      </ul>
+    <Layout>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/books/:id" component={Book} />
@@ -34,7 +21,7 @@ const routing = (
         <Route path="/about" component={About} />
         <Route component={Notfound} />
       </Switch>
-    </div>
+    </Layout>
   </Router>
 );
 
