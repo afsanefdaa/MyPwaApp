@@ -3,6 +3,7 @@ import { from } from 'rxjs';
 import {
   map, filter, mergeMap, delay,
 } from 'rxjs/operators';
+import { SWRxjsSearch } from '../../components';
 
 
 const numbersObservables = from([1, 2, 3, 4, 5, 6]);
@@ -31,11 +32,16 @@ const MyComponent = () => {
 
   return (
     <div>
-      hello rxjs
-      <p>
+      <h4>Learn RXjs</h4>
+      <p style={{
+        background: 'lightblue', padding: '20px', display: 'flex', justifyContent: 'center', borderRadius: '4px',
+      }}
+      >
          Current Number:
         {currentNumber}
       </p>
+
+      <SWRxjsSearch />
     </div>
   );
 };
