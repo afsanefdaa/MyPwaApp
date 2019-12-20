@@ -1,4 +1,6 @@
 // https://medium.com/@jasbirshergill23/lets-react-with-rxjs-82d9794d76f4
+// https://www.robinwieruch.de/react-rxjs-state-management-tutorial
+// https://blog.bitsrc.io/sharing-data-between-react-components-using-rxjs-922a46c13dbf
 import React, { useEffect, useState } from 'react';
 import fetch from 'isomorphic-fetch';
 import {
