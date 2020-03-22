@@ -5,7 +5,7 @@ import {
   Route, Switch, BrowserRouter as Router,
 } from 'react-router-dom';
 import {
-  Home, About, Book, Contact, Rxjs, Notfound,
+  Home, About, Book, Contact, Rxjs, Notfound, FormTest,
 } from './pages';
 import * as serviceWorker from './serviceWorker';
 import { Layout } from './components';
@@ -20,6 +20,7 @@ const routing = (
         <Route path="/contact" component={Contact} />
         <Route path="/about" component={About} />
         <Route path="/rxjs" component={Rxjs} />
+        <Route path="/form" component={FormTest} />
         <Route component={Notfound} />
       </Switch>
     </Layout>

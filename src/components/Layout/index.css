@@ -8,8 +8,9 @@
   font-weight: bold;
   font-size: 13px;
   text-decoration: unset;
+  color: white;
+}
 
-  :hover {
-    color: white;
-  }
+.link:hover {
+  color: #3e51b5;
 }
