@@ -5,7 +5,7 @@ import {
   Route, Switch, BrowserRouter as Router,
 } from 'react-router-dom';
 import {
-  Home, About, Book, Contact, Rxjs, Notfound, FormTest,
+  Home, About, Book, Contact, Rxjs, Notfound, FormTest, InfiniteLoop,
 } from './pages';
 import * as serviceWorker from './serviceWorker';
 import { Layout } from './components';
@@ -21,6 +21,7 @@ const routing = (
         <Route path="/about" component={About} />
         <Route path="/rxjs" component={Rxjs} />
         <Route path="/form" component={FormTest} />
+        <Route path="/infinite-loop" component={InfiniteLoop} />
         <Route component={Notfound} />
       </Switch>
     </Layout>

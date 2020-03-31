@@ -16,6 +16,7 @@ export const Layout = ({ children }) => (
         <Link className="link" to="/about">About</Link>
         <Link className="link" to="/rxjs">Rxjs</Link>
         <Link className="link" to="/form">Form&Test</Link>
+        <Link className="link" to="/infinite-loop">InfiniteLoop</Link>
       </Container>
     </div>
     <Container maxWidth="md">
