@@ -5,7 +5,7 @@ export const dragons = () => {
     .then((response) => response.data);
 };
 
-export const dragons = (id) => {
+export const dragon = (id) => {
   axios.get(`https://api.spacexdata.com/v3/dragons/${id}`)
     .then((response) => response.data);
 };
